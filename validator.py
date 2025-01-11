@@ -1,11 +1,12 @@
+#Update
 import csv, psutil
 
 def get_interface_ip():
     #Получение сведений об интефейсах 
-    addrs = psutil.net_if_addrs()
+    add = psutil.net_if_addrs()
     try:
         interfaces_ip = []
-        for key in addrs.keys():
+        for key in add.keys():
             if key == "lo":
                 continue
             else:
@@ -14,10 +15,10 @@ def get_interface_ip():
         return interfaces_ip
 
     except Exception as e:
-        print(f"Ошибка получения сведений об сетевых интерфейсах: {e}")
+        print(f"Ошибка полученияsadsdasd сведений об сетевых интерфейсах: {e}")
         exit(1)
 
-        
+
 def check_rules(ip_addr, port, conn_type):
     with open('./imports/Rules.csv', 'r') as rules_stream:
         rules = csv.reader(rules_stream)
