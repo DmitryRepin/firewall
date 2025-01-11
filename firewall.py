@@ -1,3 +1,6 @@
+# Version	Date		Info
+# 1.0		2025	Few changes
+
 import argparse, logging, time
 from datetime import datetime
 
